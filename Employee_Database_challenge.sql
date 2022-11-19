@@ -41,13 +41,13 @@ SELECT DISTINCT ON (e.emp_no,de.emp_no,ti.emp_no) e.emp_no, --retrieve the first
 	e.birth_date, 
 	de.from_date, --retrieve from_date and to_date from Department Employee
 	de.to_date,
-    ti.title
+    ti.title -- --retrieve title from Titles
 INTO Mentorship_Eligibility --Name of new table
 FROM employees AS e -- alias for employees table
-	INNER JOIN dept_emp AS de --return records that have matches between tables, alias for titles table
+	INNER JOIN dept_emp AS de --return records that have matches between tables, alias for department employee
 		ON (e.emp_no = de.emp_no) --columns where we are matching data
-    INNER JOIN titles AS ti
-        ON (e.emp_no = ti.emp_no)
+    INNER JOIN titles AS ti --return records that have matches between tables, alias for titles
+        ON (e.emp_no = ti.emp_no) -- columns where we are matching data
 WHERE (e.birth_date BETWEEN '1965-01-01' AND '1965-12-31') -- filter by employees born in the year 1965
 AND (de.to_date = '9999-01-01') --filter for only current employees
 ORDER BY e.emp_no; --order by employee number
