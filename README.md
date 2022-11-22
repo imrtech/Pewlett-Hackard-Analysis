@@ -34,7 +34,8 @@ We proceeded to narrow our search to retrieve the number of employees by their m
 
 ![This is an image](/Data/retiring_titles.png)
 
-``SELECT e.emp_no, --retrieve emp_no, first_name, and last_name from Employees
+```
+SELECT e.emp_no, --retrieve emp_no, first_name, and last_name from Employees
 	e.first_name,
 	e.last_name,
 	ti.title, --retrieve title, from_date and to_date from Titles
@@ -63,14 +64,15 @@ INTO retiring_titles
 FROM unique_titles
 GROUP BY title
 ORDER BY COUNT DESC;
-``
+```
 
 
 -- Deliverable 2: For our next deliverable, we needed to find employees that would be eligible for a mentorship program. The targeted employees would be born in the year 1965. We exported the dated into a .csv file. For this query we made sure to capture only current employees. That would result in an accurate count of eligible employees for the mentorship program. 
 
 ![This is an image](/Data/mentorship_eligibility.png)
 
-``SELECT DISTINCT ON (e.emp_no,de.emp_no,ti.emp_no) e.emp_no, --retrieve the first occurrence of the employee number for each set of rows defined by the ON () clause.
+```
+SELECT DISTINCT ON (e.emp_no,de.emp_no,ti.emp_no) e.emp_no, --retrieve the first occurrence of the employee number for each set of rows defined by the ON () clause.
 	e.first_name,
 	e.last_name,
 	e.birth_date, 
@@ -86,7 +88,7 @@ FROM employees AS e -- alias for employees table
 WHERE (e.birth_date BETWEEN '1965-01-01' AND '1965-12-31') -- filter by employees born in the year 1965
 AND (de.to_date = '9999-01-01') --filter for only current employees
 ORDER BY e.emp_no; --order by employee number
-``
+```
 
 ## Summary
 
