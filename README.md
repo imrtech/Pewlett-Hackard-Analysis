@@ -67,7 +67,9 @@ ORDER BY COUNT DESC;
 ```
 
 
-### Deliverable 2: For our next deliverable, we needed to find employees that would be eligible for a mentorship program. The targeted employees would be born in the year 1965. We exported the dated into a .csv file. For this query we made sure to capture only current employees. That would result in an accurate count of eligible employees for the mentorship program. 
+### Deliverable 2: For our next deliverable, we needed to find employees that would be eligible for a mentorship program. 
+
+The targeted employees would be born in the year 1965. We exported the dated into a .csv file. For this query we made sure to capture only current employees. That would result in an accurate count of eligible employees for the mentorship program. 
 
 ![This is an image](/Data/mentorship_eligibility.png)
 
