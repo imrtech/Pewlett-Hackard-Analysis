@@ -14,7 +14,7 @@ For this project we used ERD to design our table relationships, PGAdmin for our 
 
 ## Results
 
---Deliverable 1: Find the number of Retiring Employees by Title
+### Deliverable 1: Find the number of Retiring Employees by Title
 
 We designed our table relationships in ERD to illustrate how objects relate to each other.
 
@@ -67,7 +67,7 @@ ORDER BY COUNT DESC;
 ```
 
 
--- Deliverable 2: For our next deliverable, we needed to find employees that would be eligible for a mentorship program. The targeted employees would be born in the year 1965. We exported the dated into a .csv file. For this query we made sure to capture only current employees. That would result in an accurate count of eligible employees for the mentorship program. 
+### Deliverable 2: For our next deliverable, we needed to find employees that would be eligible for a mentorship program. The targeted employees would be born in the year 1965. We exported the dated into a .csv file. For this query we made sure to capture only current employees. That would result in an accurate count of eligible employees for the mentorship program. 
 
 ![This is an image](/Data/mentorship_eligibility.png)
 
@@ -90,7 +90,7 @@ AND (de.to_date = '9999-01-01') --filter for only current employees
 ORDER BY e.emp_no; --order by employee number
 ```
 
--- Deliverable 3: Provide two queries that might be helpful
+### Deliverable 3: Provide two queries that might be helpful
 
 ```
 SELECT COUNT(title), title
@@ -125,7 +125,7 @@ ORDER BY COUNT(title) DESC;
 
 ## Summary
 
-There are 72,458 active employees of retirement age. This would create a huge vacancy for the nine departments, but in particular filling the senior engineers and senior staff title roles will be critical. To prepare for the "silver tsunami", Pewlett Hackward will need to institue a mentiorship program that will target employees nearing retirement age. The number of employees born in 1965 who are eligible for the mentorship program is 1,549. This does not seem to be an adequate number considering how many employees will be leaving. 
+There are 72,458 active employees of retirement age. This would create a huge vacancy for the nine departments, but in particular filling the senior engineers and senior staff title roles will be critical. To prepare for the "silver tsunami", Pewlett Hackward will need to institue a mentorship program that will target employees nearing retirement age. The number of employees born in 1965 who are eligible for the mentorship program is 1,549. This does not seem to be an adequate number considering how many employees will be leaving. 
 - Running a query for the eligible employees by title can provide some insight on what departments may lack mentors.
 - Running a query for eligible employees who were born two years earlier (1963) in addition to employees born in 1965 may provide more of a comfortable cushion for Pewlett Hackward and provide the support each department will need to sustain a successful operation. It would also include additional managers which is the smallest number represented.
 
